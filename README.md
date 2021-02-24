@@ -6,16 +6,36 @@
 
 ## 安装源配置
 
+1.
 ```shell
-# 1
-sudo echo "Server = https://mirrors.ustc.edu.cn/manjaro/stable/$repo/$arch" >  /etc/pacman.d/mirrorlist # 这里用的是中科大的源，你也可以改成别的
-# 2
-sudo cat ./archlinuxcn >> /etc/pacman.conf
-# 3
+把 Server = https://mirrors.ustc.edu.cn/manjaro/stable/$repo/$arch 
+覆盖到 /etc/pacman.d/mirrorlist
+```
+
+2.
+
+```shell
+把等于号包起来的部分追加到/etc/pacman.conf
+==================================
+[archlinuxcn]
+SigLevel = Optional TrustedOnly
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+==================================
+```
+
+
+
+3.
+
+```shell
 sudo pacman -Syy
-# 4
+```
+4.
+```shell
 sudo pacman -S --noconfirm archlinuxcn-keyring
-# 5
+```
+5.
+```shell
 sudo pacman -Syyu
 ```
 

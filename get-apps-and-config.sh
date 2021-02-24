@@ -44,8 +44,8 @@ function wineApps(){
 
 #######主安装函数#######
 function instMain(){
-    $pacmanInst "$pacman_pkgs"
-    $yayInst "$yay_pkgs"
+    $pacmanInst $pacman_pkgs
+    $yayInst $yay_pkgs
     VMware
     chineseInput
     wineApps
