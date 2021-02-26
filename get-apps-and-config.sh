@@ -49,6 +49,7 @@ function instMain(){
     VMware
     chineseInput
     wineApps
+    yay -Sc --noconfirm
 }
 
 instMain
